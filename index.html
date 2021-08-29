@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,9 +16,9 @@
             top: 30vh;
             left: 20vw;
             display: flex;
-            padding: 14px;
+            border: 10px solid black;
             align-items: baseline;
-            
+            overflow: hidden;
         }
 
         #box1 {
@@ -49,15 +50,29 @@
         .box {
             height: 38vh;
             width: 11.6vw;
-            
+            transition: all 0.5 ease;
         }
 
         @keyframes updown {
-            from {
-                height: 0vh;
+            0%{
+                transform: translateY(0%);
             }
-            to {
-                height: 38vh;
+            20%{
+                transform: translateY(25%);
+            }
+            40%{
+                transform: translateY(50%);
+            }
+            60%{
+                transform: translateY(75%);
+            }
+            80%{
+                transform: translateY(90%);
+
+            }
+            100%{
+                
+                transform: translateY(0%);
             }
         }
 
@@ -113,11 +128,11 @@
 
 
     btn1.addEventListener('click',function(){
-        box1.style.animation="updown 2s infinite ";
-        box2.style.animation="updown 3s infinite ";
-        box3.style.animation="updown 4s infinite ";
-        box4.style.animation="updown 5s infinite ";
-        box5.style.animation="updown 6s infinite ";
+        box1.style.animation="updown 2s linear infinite ";
+        box2.style.animation="updown 3s linear infinite ";
+        box3.style.animation="updown 4s linear infinite ";
+        box4.style.animation="updown 5s linear infinite ";
+        box5.style.animation="updown 6s linear infinite ";
         /*animation-name: updown;
             animation-duration:1s;
             animation-iteration-count: infinite;
@@ -125,11 +140,11 @@
     })
     
     btn2.addEventListener('click',function(){
-        box1.style.animation="";
-        box2.style.animation="";
-        box3.style.animation="";
-        box4.style.animation="";
-        box5.style.animation="";
+        box1.style.webkitAnimationPlayState="paused";
+        box2.style.webkitAnimationPlayState="paused";
+        box3.style.webkitAnimationPlayState="paused";
+        box4.style.webkitAnimationPlayState="paused";
+        box5.style.webkitAnimationPlayState="paused";
     })
 </script>
 </html>
