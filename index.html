@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .container {
+            background-color: black;
+            height: 38vh;
+            width: 58vw;
+            position: absolute; 
+            top: 30vh;
+            left: 20vw;
+            display: flex;
+            padding: 14px;
+            align-items: baseline;
+            
+        }
+
+        #box1 {
+            background-color: purple;
+            position: relative;
+            
+        }
+
+        #box2 {
+            background-color: rgb(245, 79, 245);
+            position: relative;
+        }
+
+        #box3 {
+            background-color: rgb(248, 130, 149);
+            position: relative;
+        }
+
+        #box4 {
+            background-color: rgb(255, 115, 0);
+            position: relative;
+        }
+
+        #box5 {
+            background-color: rgb(231, 231, 97);
+            position: relative;
+        }
+
+        .box {
+            height: 38vh;
+            width: 11.6vw;
+            
+        }
+
+        @keyframes updown {
+            from {
+                height: 0vh;
+            }
+            to {
+                height: 38vh;
+            }
+        }
+
+        .buttons {
+            position: absolute;
+            top: 86vh;
+            left: 40vw;
+            display: flex;
+            cursor: pointer;
+        }
+
+        #btn1 {
+            background-color: green;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            margin-right: 100px;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        #btn2 {
+            background-color: red;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            margin-left: 100px;
+            font-size: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+    </div>
+    <div class="buttons">
+        <button id="btn1">Start</button>
+        <button id="btn2"> Stop </button>
+    </div>
+</body>
+ <script> 
+    let element1 = document.getElementById('box1');
+    let element2 = document.getElementById('box2');
+    let element3 = document.getElementById('box3');
+    let element4 = document.getElementById('box4');
+    let element5 = document.getElementById('box5');
+
+
+    btn1.addEventListener('click',function(){
+        box1.style.animation="updown 2s infinite ";
+        box2.style.animation="updown 3s infinite ";
+        box3.style.animation="updown 4s infinite ";
+        box4.style.animation="updown 5s infinite ";
+        box5.style.animation="updown 6s infinite ";
+        /*animation-name: updown;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;*/
+    })
+    
+    btn2.addEventListener('click',function(){
+        box1.style.animation="";
+        box2.style.animation="";
+        box3.style.animation="";
+        box4.style.animation="";
+        box5.style.animation="";
+    })
+</script>
+</html>
